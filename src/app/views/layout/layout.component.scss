@@ -1,0 +1,39 @@
+mat-sidenav-container {
+  mat-sidenav {
+    width: 300px;
+    .sidenav {
+      .sidebar-head {
+        height: 64px;
+        background: rgb(24, 40, 110);
+        .buttonToggle {
+          color: white;
+          border: white 1px solid;
+          background: rgba(255, 255, 255, 0);
+          border-radius: 5px;
+          margin-top: 12px;
+          float: right;
+          margin-right: 15px;
+          height: 40px;
+          width: 40px;
+        }
+      }
+      .sidebar-body {
+        .section {
+          .section-header {
+              height: 40px;
+            .icon-section {
+              padding: 0 14px;
+            }
+            .spacer {
+              flex: 1 1 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  mat-sidenav-content {
+    min-height: 100vh;
+  }
+}

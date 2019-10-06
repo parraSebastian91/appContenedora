@@ -1,0 +1,53 @@
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav #sidenav [mode]="mode.value">
+        <div class="sidenav">
+            <div class="sidebar-head">
+                <div class="logo-sidebar-head">
+
+                </div>
+                <button mat-button (click)="sidenav.toggle()" class="buttonToggle">
+                    <fa-icon [icon]="faBars"></fa-icon>
+                </button>
+            </div>
+            <div class="sidebar-body">
+
+                <div class="section" *ngFor="let section of menu">
+                    <mat-toolbar class="section-header">
+                        <span>{{section.nameSection}}</span>
+                        <span class="spacer"></span>                        
+                    </mat-toolbar>
+
+                    <mat-accordion *ngFor="let item of section.items">
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <fa-icon [icon]="faBars"></fa-icon>
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                    {{item.name}}
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <mat-nav-list>
+                                <a mat-list-item routerLink="." *ngFor="let subItem of item.list">{{subItem.name}}</a>
+                            </mat-nav-list>
+                        </mat-expansion-panel>                       
+                    </mat-accordion>
+
+                </div>
+              
+            </div>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <button mat-button (click)="sidenav.toggle()">
+                    <fa-icon [icon]="faBars"></fa-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
