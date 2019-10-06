@@ -29,25 +29,17 @@ export class AuthUserService {
             url: '#',
             list: [
               {
-                name: 'nombre sub-item 1',
+                name: 'Procesos',
                 icono: 'faBars',
-                url: '#',
+                url: '/view/layout/list_process',
                 list: [
     
                 ]
               },
               {
-                name: 'nombre sub-item 2',
+                name: 'Subir Documentos',
                 icono: 'faBars',
-                url: '#',
-                list: [
-    
-                ]
-              },
-              {
-                name: 'nombre sub-item 3',
-                icono: 'faBars',
-                url: '#',
+                url: '/view/layout/upload',
                 list: [
     
                 ]
