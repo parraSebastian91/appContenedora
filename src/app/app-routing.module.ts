@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path:'view',
     loadChildren:'./views/views.module#ViewsModule'
+  },
+  {
+    path:'**',
+    redirectTo:'view/page/login'
   }
 ];
 

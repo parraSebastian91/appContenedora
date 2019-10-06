@@ -13,6 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatExpansionModule} from '@angular/material/expansion'; 
 import {MatListModule} from '@angular/material/list'; 
 import {MatMenuModule} from '@angular/material/menu'; 
+import {MatDividerModule} from '@angular/material/divider'; 
 
 import {AuthUserService} from './../../_services/auth/auth-user.service';
 
@@ -29,7 +30,8 @@ import {AuthUserService} from './../../_services/auth/auth-user.service';
     MatToolbarModule,
     MatExpansionModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule
   ],
   providers:[
     AuthUserService

@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
       let response = this._authUserService.autentificacion(this.usuario)
       console.log(response)
       if (response.code === "ok") {
-        this.router.navigate(['/view/layout']);
+        this.router.navigate(['/view/layout/list_process']);
       } else {
         this.btnClass = this.btnClassArray[1]
         this.inputClassUser = this.btnClassArray[1]
