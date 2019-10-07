@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars,faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 import {AuthUserService} from './../../_services/auth/auth-user.service'
 
@@ -19,14 +19,16 @@ export class LayoutComponent implements OnInit {
   }
   menu 
   faBars = faBars
+  faSignOutAlt = faSignOutAlt
 
   mode = new FormControl('over');
   shouldRun = true
 
   ngOnInit() {
+    
   }
 
-  testClick() {
+  signOut() {
 
   }
 

@@ -16,6 +16,10 @@ export class AuthUserService {
     }
   }
 
+  signOut(){
+
+  }
+
   getMenuItems() {   
 
     let menu = [

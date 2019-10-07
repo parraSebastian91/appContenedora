@@ -6,26 +6,29 @@ import { LayoutComponent } from './layout.component';
 import { ListProcessComponent } from './component/list-process/list-process.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatRadioModule} from '@angular/material/radio';
-import {FormsModule,ReactiveFormsModule,} from '@angular/forms';
-import {MatToolbarModule} from '@angular/material/toolbar'; 
-import {MatExpansionModule} from '@angular/material/expansion'; 
-import {MatListModule} from '@angular/material/list'; 
-import {MatMenuModule} from '@angular/material/menu'; 
-import {MatDividerModule} from '@angular/material/divider'; 
-import {MatCardModule} from '@angular/material/card'; 
-import {MatFormFieldModule} from '@angular/material/form-field'; 
-import {MatTableModule} from '@angular/material/table'; 
-import {MatButtonModule} from '@angular/material/button'; 
-import {MatDialogModule} from '@angular/material/dialog'; 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { MatInputModule } from '@angular/material/input';
+import {MatTabsModule} from '@angular/material/tabs';
 
-import {AuthUserService} from './../../_services/auth/auth-user.service';
+import { AuthUserService } from './../../_services/auth/auth-user.service';
 import { UploadDocComponent } from './component/upload-doc/upload-doc.component';
+import { GridViewComponent } from './component/grid-view/grid-view.component';
 
 @NgModule({
-  declarations: [LayoutComponent, ListProcessComponent, UploadDocComponent],
+  declarations: [LayoutComponent, ListProcessComponent, UploadDocComponent, GridViewComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,
@@ -44,9 +47,11 @@ import { UploadDocComponent } from './component/upload-doc/upload-doc.component'
     MatTableModule,
     MatButtonModule,
     MatDialogModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    MatInputModule,
+    MatTabsModule
   ],
-  providers:[
+  providers: [
     AuthUserService
   ],
 })

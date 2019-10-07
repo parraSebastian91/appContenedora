@@ -1,0 +1,24 @@
+.example-header-image {
+    background-image: url("/assets/img/logos/header-img.png");
+    background-size: cover;
+  }
+  .container-fluid {
+    padding-top: 112px;
+    padding-bottom: 20px; 
+  }
+  .header-card{
+      border-bottom: rgba(160, 160, 160, 0.534) 1px solid;
+      margin-bottom: 15px;
+  }
+  .header-img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 200px;
+    background-image: url("/assets/img/background/header-bg.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  

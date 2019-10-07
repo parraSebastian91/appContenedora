@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    redirectTo:'view/page/login'
+    redirectTo:'view/page/error'
   }
 ];
 

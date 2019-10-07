@@ -6,11 +6,14 @@ import { Usuario} from './../modelos/usuarios.class'
 import { AuthUserService } from './../_services/auth/auth-user.service'
 
 import { ViewsRoutingModule } from './views-routing.module';
-import { LoginComponent } from './pages/login/login.component'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './pages/login/login.component';
+import { ErrorPageComponent } from './pages/error/error-page/error-page.component'
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    ErrorPageComponent
   ],
   providers:[
     CookieService,
@@ -19,7 +22,8 @@ import { LoginComponent } from './pages/login/login.component'
   ],
   imports: [
     CommonModule,
-    ViewsRoutingModule
+    ViewsRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class ViewsModule { }
