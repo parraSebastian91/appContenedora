@@ -4,6 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { UploadDocComponent } from './../upload-doc/upload-doc.component'
 import { Router } from '@angular/router';
 
+import Swal from 'sweetalert2'
+
 export interface PeriodicElement {
   position: number;
   macro: string
@@ -12,8 +14,13 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, nombreProceso: 'Pactos', macro: 'Cuadratura Online', estado: 'No Procesado' },
-  { position: 1, nombreProceso: 'Pactos', macro: 'Cuadratura RF', estado: 'No Procesado' },
+  { position: 1, nombreProceso: 'Cuadratura Pactos', macro: 'Cuadratura Online', estado: 'No Procesado' },
+  { position: 2, nombreProceso: 'Cuadratura Pactos', macro: 'Cuadratura RF', estado: 'No Procesado' },
+  { position: 3, nombreProceso: 'Cartera en linea', macro: 'Cartera en Linea 3', estado: 'No Procesado' },
+  { position: 4, nombreProceso: 'Cuadratura Garantías', macro: 'Macro (6)', estado: 'No Procesado' },
+  { position: 5, nombreProceso: 'Informe Semanal Bolsas RV', macro: 'Cuadratura RV', estado: 'No Procesado' },
+  { position: 6, nombreProceso: 'Ventas Descubrimiento Cartera Propia', macro: 'Cuadratura Sobreventas Diarias', estado: 'No Procesado' },
+  { position: 7, nombreProceso: 'Ventas Desubrimiento Clientes', macro: 'Cuadratura Sobreventas Diarias Cientes', estado: 'No Procesado' },
 ];
 
 @Component({
@@ -39,10 +46,21 @@ export class ListProcessComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(UploadDocComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    Swal.fire({
+      title: '',
+      text: '¿Desea cargar archivo nuevo?',
+      type: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No',
+    }).then((result) => {
+      if (result.value) {
+        const dialogRef = this.dialog.open(UploadDocComponent);
+        dialogRef.afterClosed().subscribe(result => {
+          console.log(`Dialog result: ${result}`);
+        });
+      }
+    })
   }
 
   verProceso(macro) {

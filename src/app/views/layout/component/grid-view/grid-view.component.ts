@@ -7,9 +7,21 @@ import { faFileExcel } from '@fortawesome/free-solid-svg-icons';
 const lvl_online_IF = [
   {
     name: 'Comparativo',
-    saldo: "Saldos de Posiciones Custodia",
-    distribucion: "Distribución Cartera",
-    Comparativo: "Comparativo Pactos",
+    saldo: {
+      name: "Saldos de Posiciones Custodia",
+      saldo1: "256.643.975.738,294",
+      saldo2:"0,00"
+    },
+    distribucion: {
+      name:"Distribución Cartera",
+      saldo1: "8.383.348.937,5565",
+      saldo2: "248.260.626.800,737"
+    },
+    comparativo: {
+      name: "Comparativo Pactos",
+      saldo1: "249.390.626.800,74",
+      saldo2: "249.390.626.800,74"
+    },
     grilla: false
   },
   {
@@ -496,11 +508,20 @@ const lvl_Cuadratura_RF = [
   {
     name: 'Resumen',
     saldo: {
-      name:"Saldos de Custodia RF",
-      saldo1: ""
-    },    
-    distribucion: "Saldos de Cartera RF",
-    Comparativo: "Comparativo Pactos & Cartera RF & Custodia RF",
+      name: "Saldos de Custodia RF",
+      saldo1: "19.832.715.973,00",
+      saldo2: "50.419.250.340,00"
+    },
+    distribucion:  {
+      name: "Saldos de Cartera RF",
+      saldo1: "19.832.715.973,00",
+      saldo2: "50.419.250.340,00"
+    },
+    comparativo: {
+      name:  "Comparativo Pactos & Cartera RF & Custodia RF",
+      saldo1: "50.419.250.340,00",
+      saldo2: "50.419.250.340,00"
+    },
     grilla: false
   },
   {
@@ -1160,6 +1181,7 @@ export class GridViewComponent implements OnInit {
   Proceso;
   grid_type;
   tabs_OLRF;
+  isRF= false
 
   constructor(private rutaActiva: ActivatedRoute) {
     this.grid_type = this.rutaActiva.snapshot.params.name
@@ -1169,10 +1191,12 @@ export class GridViewComponent implements OnInit {
     switch (this.grid_type) {
       case "cuadratura_online":
         this.Proceso = "Cuadratura Online"
+        this.isRF = false
         this.tabs_OLRF = lvl_online_IF
         break;
       case "cuadratura_rf":
         this.Proceso = "Cuadratura RF"
+        this.isRF = true
         this.tabs_OLRF = lvl_Cuadratura_RF
         break;
     }

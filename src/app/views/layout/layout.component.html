@@ -1,10 +1,10 @@
 <mat-sidenav-container class="example-container" *ngIf="shouldRun">
-    <mat-sidenav #sidenav [mode]="mode.value">
+    <mat-sidenav #sidenav [mode]="over">
         <div class="sidenav">
             <div class="sidebar-head">
                 <img class="logo-sidebar-head" src="assets/img/logos/Corredor-de-Bolsa.png" alt="">
                 <button mat-button (click)="sidenav.toggle()" class="buttonHadSidebar">
-                    <fa-icon [icon]="faBars" ></fa-icon>
+                    <fa-icon [icon]="faBars"></fa-icon>
                 </button>
                 <button mat-button (click)="signOut()" class="buttonHadSidebar  rotate-180">
                     <fa-icon [icon]="faSignOutAlt"></fa-icon>
@@ -12,13 +12,13 @@
             </div>
             <mat-divider></mat-divider>
             <div class="sidebar-body">
-                <div class="section" *ngFor="let section of menu">
+                <div class="section" *ngFor="let section of menuNavegacion">
                     <mat-toolbar class="section-header">
                         <span>{{section.nameSection}}</span>
                         <span class="spacer"></span>
                     </mat-toolbar>
-                    <mat-accordion *ngFor="let item of section.items">
-                        <mat-expansion-panel>
+                    <mat-accordion *ngFor="let item of section.items ; let index = index">
+                        <mat-expansion-panel [expanded]="step === index" (opened)="setStep(index)" hideToggle>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
                                     <!-- <fa-icon [icon]="faBars"></fa-icon> -->
@@ -43,6 +43,16 @@
                 <button mat-button (click)="sidenav.toggle()" class="buttonToggle">
                     <fa-icon [icon]="faBars"></fa-icon>
                 </button>
+                <span class="spacer"></span>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <fa-icon [icon]="faEllipsisV"></fa-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <span>Cerrar Sesión</span>
+                        <fa-icon [icon]="faSignOutAlt" style="padding-left: 5px;"></fa-icon>
+                    </button>                   
+                </mat-menu>
             </mat-toolbar-row>
         </mat-toolbar>
         <mat-divider></mat-divider>

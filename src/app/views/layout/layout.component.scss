@@ -74,3 +74,11 @@ mat-sidenav-container {
     }
   }
 }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.rotate-180{
+  transform: rotate(180deg);
+}

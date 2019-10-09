@@ -21,52 +21,62 @@
                             <mat-tab-group>
                                 <mat-tab *ngFor="let tab of tabs_OLRF; let index = index" [label]="tab.name">
                                     <app-grilla [header]="tab.header" [data]="tab.data" *ngIf="tab.grilla"></app-grilla>
-                                    <div class="row">
+                                    <div class="row" *ngIf="!tab.grilla" style="padding: 40px; width:99%;">
                                         <div class="col-md-6">
-                                            <mat-card class="example-card" *ngIf="!tab.grilla">
-                                                <mat-card-header>
-                                                    <mat-toolbar>
-                                                        <mat-toolbar-row>
-                                                            <span>{{tab.saldo}}</span>
-                                                        </mat-toolbar-row>
-                                                    </mat-toolbar>
-                                                </mat-card-header>
-                                                <mat-card-content>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <span></span>
-                                                        </div>
-                                                        <div class="col-md-6">
+                                            <TABLE BORDER="1" style="width: 100%">
+                                                <TR>
+                                                    <TH COLSPAN="2" ALIGN="center">{{tab.saldo.name}}</TH>
+                                                    <TH COLSPAN="2" ALIGN="center">{{tab.distribucion.name}}</TH>
+                                                </TR>
+                                                <TR>
+                                                    <TD>Disponible</TD>
+                                                    <TD>Garantia</TD>
+                                                    <TD>Libre</TD>
+                                                    <TD>Pactada</TD>
+                                                    <TD>Diferencia</TD>
+                                                </TR>
+                                                <TR>
+                                                    <TD>{{tab.saldo.saldo1}}</TD>
+                                                    <TD>{{tab.saldo.saldo2}}</TD>
+                                                    <TD>{{tab.distribucion.saldo1}}</TD>
+                                                    <TD>{{tab.distribucion.saldo2}}</TD>
+                                                    <TD style="background: green;">0,00</TD>
+                                                </TR>
+                                            </TABLE>
 
-                                                        </div>
-                                                    </div>
-                                                </mat-card-content>
-                                            </mat-card>
+
                                         </div>
                                         <div class="col-md-6">
-                                            <mat-card class="example-card" *ngIf="!tab.grilla">
-                                                <mat-card-header>
-                                                    <mat-toolbar>
-                                                        <mat-toolbar-row>
-                                                            <span>{{tab.distribucion}}</span>
-                                                        </mat-toolbar-row>
-                                                    </mat-toolbar>
-                                                </mat-card-header>
-                                                <mat-card-content>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <span></span>
-                                                        </div>
-                                                        <div class="col-md-6">
 
-                                                        </div>
-                                                    </div>
-                                                </mat-card-content>
-                                            </mat-card>
+                                            <TABLE BORDER="1" style="width: 100%">
+                                                <TR>
+                                                    <TH COLSPAN="3" ALIGN="center">{{tab.comparativo.name}}</TH>
+                                                </TR>
+                                                <TR>
+                                                    <TD>Cartera Pacteada</TD>
+                                                    <TD>Pactos Vigentes</TD>
+                                                    <TD *ngIf="isRF">Pactos Vigentes</TD>
+                                                    <TD>Diferencia</TD>
+                                                </TR>
+
+                                                <TR>
+                                                    <TD>249.390.626.800,74</TD>
+                                                    <TD>249.390.626.800,74</TD>
+                                                    <TD *ngIf="isRF">50.419.250.340,00</TD>
+                                                    <TD  style="background: green;">0,00</TD>
+                                                </TR>
+                                            </TABLE>
                                         </div>
-
                                     </div>
-
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="example-full-width">
+                                                <textarea matInput placeholder="Justificación"></textarea>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
                                 </mat-tab>
                             </mat-tab-group>
                         </div>

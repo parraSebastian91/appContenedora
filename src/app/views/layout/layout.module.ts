@@ -23,6 +23,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 import { MatInputModule } from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import { DynamicTableModule } from 'material-dynamic-table';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
  
 
 import { AuthUserService } from './../../_services/auth/auth-user.service';
@@ -54,7 +55,8 @@ import { GrillaComponent } from './component/grid-view/grilla/grilla.component';
     NgxDropzoneModule,
     MatInputModule,
     MatTabsModule,
-    DynamicTableModule
+    DynamicTableModule,
+    SweetAlert2Module
   ],
   providers: [
     AuthUserService
