@@ -22,13 +22,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { MatInputModule } from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
+import { DynamicTableModule } from 'material-dynamic-table';
+ 
 
 import { AuthUserService } from './../../_services/auth/auth-user.service';
 import { UploadDocComponent } from './component/upload-doc/upload-doc.component';
 import { GridViewComponent } from './component/grid-view/grid-view.component';
+import { GrillaComponent } from './component/grid-view/grilla/grilla.component';
+
 
 @NgModule({
-  declarations: [LayoutComponent, ListProcessComponent, UploadDocComponent, GridViewComponent],
+  declarations: [LayoutComponent, ListProcessComponent, UploadDocComponent, GridViewComponent, GrillaComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,
@@ -49,7 +53,8 @@ import { GridViewComponent } from './component/grid-view/grid-view.component';
     MatDialogModule,
     NgxDropzoneModule,
     MatInputModule,
-    MatTabsModule
+    MatTabsModule,
+    DynamicTableModule
   ],
   providers: [
     AuthUserService

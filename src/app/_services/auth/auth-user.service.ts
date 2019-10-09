@@ -16,11 +16,11 @@ export class AuthUserService {
     }
   }
 
-  signOut(){
+  signOut() {
 
   }
 
-  getMenuItems() {   
+  getMenuItems() {
 
     let menu = [
       {
@@ -29,97 +29,18 @@ export class AuthUserService {
         items: [
           {
             name: 'nombre item 1',
-            icono: 'faBars',
             url: '#',
             list: [
               {
                 name: 'Procesos',
-                icono: 'faBars',
-                url: '/view/layout/list_process',
-                list: [
-    
-                ]
-              },
-              {
-                name: 'Subir Documentos',
-                icono: 'faBars',
-                url: '/view/layout/upload',
-                list: [
-    
-                ]
+                url: '/view/layout/list_process'                
               }
             ]
-          },
-          {
-            name: 'nombre item 2',
-            icono: 'faBars',
-            url: '#',
-            list: [
-              {
-                name: 'nombre item 1',
-                icono: 'faBars',
-                url: '#',
-                list: [
-    
-                ]
-              },
-              {
-                name: 'nombre item 2',
-                icono: 'faBars',
-                url: '#',
-                list: [
-    
-                ]
-              },
-              {
-                name: 'nombre item 3',
-                icono: 'faBars',
-                url: '#',
-                list: [
-    
-                ]
-              }
-            ]
-          }
+          },         
         ]
       },
-      {
-        nameSection: 'seccion 2',
-        iconSection: 'faBars',
-        items: [
-          {
-            name: 'nombre item',
-            icono: 'faBars',
-            url: '#',
-            list: [
-              {
-                name: 'nombre item 1',
-                icono: 'faBars',
-                url: '#',
-                list: [
     
-                ]
-              },
-              {
-                name: 'nombre item 2',
-                icono: 'faBars',
-                url: '#',
-                list: [
-    
-                ]
-              },
-              {
-                name: 'nombre item 3',
-                icono: 'faBars',
-                url: '#',
-                list: [
-    
-                ]
-              }
-            ]
-          }
-        ]
-      }
+
     ]
 
     return menu;
