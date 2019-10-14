@@ -5,19 +5,19 @@ mat-sidenav-container {
       .sidebar-head {
         height: 64px;
         background: #f5f5f5;
-        .logo-sidebar-head{
+        .logo-sidebar-head {
           width: 10em;
           padding-top: 0.5em;
           padding-left: 0.5em;
         }
 
-        .rotate-180{
+        .rotate-180 {
           transform: rotate(180deg);
         }
 
         .buttonHadSidebar {
-          color: rgba(0,0,0,.87);
-          border: rgba(0,0,0,.87) 1px solid;
+          color: rgba(0, 0, 0, 0.87);
+          border: rgba(0, 0, 0, 0.87) 1px solid;
           background: rgba(255, 255, 255, 0);
           border-radius: 5px;
           margin-top: 12px;
@@ -32,7 +32,7 @@ mat-sidenav-container {
       .sidebar-body {
         .section {
           .section-header {
-              height: 40px;
+            height: 40px;
             .icon-section {
               padding: 0 14px;
             }
@@ -41,11 +41,10 @@ mat-sidenav-container {
             }
           }
         }
-        
       }
     }
   }
-  footer{
+  footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -53,16 +52,16 @@ mat-sidenav-container {
   }
   mat-sidenav-content {
     min-height: 100vh;
-    mat-toolbar{
+    mat-toolbar {
       position: fixed;
       z-index: 1;
-      mat-toolbar-row{
-        box-shadow: 0px 0px 10px gray;             
-        .buttonToggle{
-          color: rgba(0,0,0,.87);
-          border: rgba(0,0,0,.87) 1px solid;
+      mat-toolbar-row {
+        box-shadow: 0px 0px 10px gray;
+        .buttonToggle {
+          color: rgba(0, 0, 0, 0.87);
+          border: rgba(0, 0, 0, 0.87) 1px solid;
           background: rgba(255, 255, 255, 0);
-          border-radius: 5px;          
+          border-radius: 5px;
           float: right;
           margin-right: 15px;
           height: 40px;
@@ -79,6 +78,21 @@ mat-sidenav-container {
   flex: 1 1 auto;
 }
 
-.rotate-180{
+.rotate-180 {
   transform: rotate(180deg);
+}
+
+.user-image {
+  background-image: url("/assets/img/logos/header-img.png");
+  background-size: cover;
+  float: left;
+}
+
+.name-user {
+  float: right;
+}
+
+.btn-user {
+  width: 95px;
+  margin-right: 20px;
 }

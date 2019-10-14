@@ -24,11 +24,11 @@ export class AuthUserService {
 
     let menu = [
       {
-        nameSection: 'seccion 1',
+        nameSection: 'Custodia',
         iconSection: 'faBars',
         items: [
           {
-            name: 'nombre item 1',
+            name: 'Administración',
             url: '#',
             list: [
               {

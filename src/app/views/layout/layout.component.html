@@ -44,14 +44,18 @@
                     <fa-icon [icon]="faBars"></fa-icon>
                 </button>
                 <span class="spacer"></span>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="btn-user">
+                    <div mat-card-avatar class="user-image"></div>                    
+                    <span class="name-user">Usuario</span>
+                </button>
                 <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-                        <fa-icon [icon]="faEllipsisV"></fa-icon>
+                    <fa-icon [icon]="faEllipsisV"></fa-icon>
                 </button>
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item>
                         <span>Cerrar Sesión</span>
                         <fa-icon [icon]="faSignOutAlt" style="padding-left: 5px;"></fa-icon>
-                    </button>                   
+                    </button>
                 </mat-menu>
             </mat-toolbar-row>
         </mat-toolbar>

@@ -11,16 +11,18 @@ export interface PeriodicElement {
   macro: string
   nombreProceso: string;
   estado: string;
+  style:string;
 }
 
+
 const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, nombreProceso: 'Cuadratura Pactos', macro: 'Cuadratura Online', estado: 'No Procesado' },
-  { position: 2, nombreProceso: 'Cuadratura Pactos', macro: 'Cuadratura RF', estado: 'No Procesado' },
-  { position: 3, nombreProceso: 'Cartera en linea', macro: 'Cartera en Linea 3', estado: 'No Procesado' },
-  { position: 4, nombreProceso: 'Cuadratura Garantías', macro: 'Macro (6)', estado: 'No Procesado' },
-  { position: 5, nombreProceso: 'Informe Semanal Bolsas RV', macro: 'Cuadratura RV', estado: 'No Procesado' },
-  { position: 6, nombreProceso: 'Ventas Descubrimiento Cartera Propia', macro: 'Cuadratura Sobreventas Diarias', estado: 'No Procesado' },
-  { position: 7, nombreProceso: 'Ventas Desubrimiento Clientes', macro: 'Cuadratura Sobreventas Diarias Cientes', estado: 'No Procesado' },
+  { position: 1, nombreProceso: 'Cuadratura Pactos', macro: 'Cuadratura Online', estado: 'No Procesado', style:'noProcesado' },
+  { position: 2, nombreProceso: 'Cuadratura Pactos', macro: 'Cuadratura RF', estado: 'No Procesado', style:'noProcesado' },
+  { position: 3, nombreProceso: 'Cartera en linea', macro: 'Cartera en Linea 3', estado: 'Procesado' , style:'Procesado'},
+  { position: 4, nombreProceso: 'Cuadratura Garantías', macro: 'Macro (6)', estado: 'No Procesado', style:'noProcesado' },
+  { position: 5, nombreProceso: 'Informe Semanal Bolsas RV', macro: 'Cuadratura RV', estado: 'No Procesado', style:'noProcesado' },
+  { position: 6, nombreProceso: 'Ventas Descubrimiento Cartera Propia', macro: 'Cuadratura Sobreventas Diarias', estado: 'No Procesado' , style:'noProcesado'},
+  { position: 7, nombreProceso: 'Ventas Desubrimiento Clientes', macro: 'Cuadratura Sobreventas Diarias Cientes', estado: 'Procesado' , style:'Procesado'},
 ];
 
 @Component({
@@ -73,6 +75,15 @@ export class ListProcessComponent implements OnInit {
         this.Procesos = macro
         this.router.navigate(['view/layout/grid/cuadratura_rf'])
         break;
+    }
+  }
+
+  styloProceso(estado) {
+    switch (estado) {
+      case 'No Procesado':
+        return 'noProcesado';
+      case 'Procesado':
+        return 'Procesado';
     }
   }
 

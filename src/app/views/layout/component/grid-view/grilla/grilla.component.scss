@@ -1,0 +1,19 @@
+.mat-cell
+{
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-left-style: dotted;
+}
+
+table{
+    tbody{
+        tr{
+            td{
+                border-left-width: 1px;
+                border-left-style: dotted;
+            }
+        }
+    }
+}

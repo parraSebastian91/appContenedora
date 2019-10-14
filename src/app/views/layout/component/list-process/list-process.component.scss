@@ -8,11 +8,11 @@
 
 .container-fluid {
   padding-top: 112px;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
 }
-.header-card{
-    border-bottom: rgba(160, 160, 160, 0.534) 1px solid;
-    margin-bottom: 15px;
+.header-card {
+  border-bottom: rgba(160, 160, 160, 0.534) 1px solid;
+  margin-bottom: 15px;
 }
 .header-img {
   position: absolute;
@@ -27,10 +27,31 @@
 }
 
 table {
-    width: 100%;
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+mat-chip-list {
+  mat-chip {
   }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
+}
+
+.noProcesado {
+  max-width: 75%;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.Procesado {
+  max-width: 75%;
+  background-color: green;
+  color: white;  
+  padding: 5px;
+  border-radius: 7px;
+}

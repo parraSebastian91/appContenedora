@@ -21,19 +21,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { MatInputModule } from '@angular/material/input';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { DynamicTableModule } from 'material-dynamic-table';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
- 
+import { MatChipsModule } from '@angular/material/chips';
+import { HotTableModule } from '@handsontable/angular';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AuthUserService } from './../../_services/auth/auth-user.service';
 import { UploadDocComponent } from './component/upload-doc/upload-doc.component';
 import { GridViewComponent } from './component/grid-view/grid-view.component';
 import { GrillaComponent } from './component/grid-view/grilla/grilla.component';
+import { GrillaDosComponent } from './component/grid-view/grilla-dos/grilla-dos.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, ListProcessComponent, UploadDocComponent, GridViewComponent, GrillaComponent],
+  declarations: [LayoutComponent, ListProcessComponent, UploadDocComponent, GridViewComponent, GrillaComponent, GrillaDosComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,
@@ -56,7 +59,10 @@ import { GrillaComponent } from './component/grid-view/grilla/grilla.component';
     MatInputModule,
     MatTabsModule,
     DynamicTableModule,
-    SweetAlert2Module
+    SweetAlert2Module,
+    MatChipsModule,
+    HotTableModule,
+    HttpClientModule
   ],
   providers: [
     AuthUserService

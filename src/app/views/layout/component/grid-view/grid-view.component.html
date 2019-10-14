@@ -20,7 +20,7 @@
                         <div class="col-md-12">
                             <mat-tab-group>
                                 <mat-tab *ngFor="let tab of tabs_OLRF; let index = index" [label]="tab.name">
-                                    <app-grilla [header]="tab.header" [data]="tab.data" *ngIf="tab.grilla"></app-grilla>
+                                    <app-grilla-dos [header]="tab.header" [data]="tab.data" *ngIf="tab.grilla"></app-grilla-dos>
                                     <div class="row" *ngIf="!tab.grilla" style="padding: 40px; width:99%;">
                                         <div class="col-md-6">
                                             <TABLE BORDER="1" style="width: 100%">
@@ -43,8 +43,6 @@
                                                     <TD style="background: green;">0,00</TD>
                                                 </TR>
                                             </TABLE>
-
-
                                         </div>
                                         <div class="col-md-6">
 
@@ -68,7 +66,7 @@
                                             </TABLE>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-md-3"></div>
                                         <div class="col-md-6">
                                             <mat-form-field class="example-full-width">
@@ -76,7 +74,7 @@
                                             </mat-form-field>
                                         </div>
                                         <div class="col-md-3"></div>
-                                    </div>
+                                    </div> -->
                                 </mat-tab>
                             </mat-tab-group>
                         </div>
